@@ -1,349 +1,333 @@
-<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>The Curated Legacy | F&amp;B Hospitality Excellence</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<!-- Thư viện parse Markdown và CSS Chatbot -->
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<link rel="stylesheet" href="chatbot.css">
-<script id="tailwind-config">
-        tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              colors: {
-                "on-tertiary-container": "#8997ae",
-                "surface-container-high": "#e9e8e7",
-                "tertiary-fixed-dim": "#bac7e0",
-                "on-primary-fixed-variant": "#24467c",
-                "surface-container-highest": "#e3e2e1",
-                "on-background": "#1a1c1c",
-                "background": "#faf9f8",
-                "surface-container-low": "#f4f3f2",
-                "surface-container-lowest": "#ffffff",
-                "on-error-container": "#93000a",
-                "secondary-fixed": "#ffddb6",
-                "on-tertiary-fixed-variant": "#3a475c",
-                "on-error": "#ffffff",
-                "surface-bright": "#faf9f8",
-                "outline-variant": "#c4c6d1",
-                "on-primary-container": "#7796d1",
-                "on-secondary-container": "#785e3e",
-                "on-tertiary-fixed": "#0e1c2e",
-                "primary-container": "#002d62",
-                "primary-fixed": "#d7e2ff",
-                "on-surface": "#1a1c1c",
-                "primary-fixed-dim": "#abc7ff",
-                "error-container": "#ffdad6",
-                "secondary": "#735a3a",
-                "surface-variant": "#e3e2e1",
-                "on-secondary": "#ffffff",
-                "surface-dim": "#dadad9",
-                "tertiary-fixed": "#d6e3fc",
-                "on-surface-variant": "#43474f",
-                "inverse-on-surface": "#f1f0f0",
-                "error": "#ba1a1a",
-                "tertiary": "#0c1a2c",
-                "inverse-primary": "#abc7ff",
-                "on-primary": "#ffffff",
-                "secondary-container": "#fddab2",
-                "primary": "#00193c",
-                "surface-container": "#eeeeed",
-                "inverse-surface": "#2f3130",
-                "surface": "#faf9f8",
-                "outline": "#747781",
-                "on-secondary-fixed": "#291801",
-                "surface-tint": "#3e5e95",
-                "tertiary-container": "#222f42",
-                "on-tertiary": "#ffffff",
-                "on-primary-fixed": "#001b3f",
-                "on-secondary-fixed-variant": "#594325",
-                "secondary-fixed-dim": "#e2c19b"
-              },
-              fontFamily: {
-                "headline": ["Newsreader", "serif"],
-                "body": ["Manrope", "sans-serif"],
-                "label": ["Manrope", "sans-serif"]
-              },
-              borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
-            },
-          },
-        }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-        }
-        .glass-nav {
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-    </style>
-</head>
-<body class="bg-background text-on-background font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-stone-50/70 dark:bg-slate-950/70 backdrop-blur-md">
-<div class="flex justify-between items-center max-w-7xl mx-auto px-8 py-6">
-<span class="text-xl font-serif italic tracking-tight text-blue-950 dark:text-stone-100" style="">The Curated Legacy</span>
-<div class="hidden md:flex items-center gap-12">
-<a class="text-stone-600 dark:text-stone-400 font-medium tracking-wide hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-300" href="#expertise" style="">Expertise</a>
-<a class="text-stone-600 dark:text-stone-400 font-medium tracking-wide hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-300" href="#experience" style="">Experience</a>
-<a class="text-stone-600 dark:text-stone-400 font-medium tracking-wide hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-300" href="#services" style="">Services</a>
-<a class="text-stone-600 dark:text-stone-400 font-medium tracking-wide hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-300" href="#portfolio" style="">Portfolio</a>
-</div>
-<a class="px-6 py-3 bg-primary text-on-primary text-sm font-label tracking-widest uppercase hover:opacity-90 transition-all active:scale-95" href="#contact" style="">Consultation</a>
-</div>
-</nav>
-<!-- Hero Section -->
-<header class="relative pt-44 pb-32 overflow-hidden">
-<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-<div class="lg:col-span-7 z-10">
-<span class="inline-block text-secondary font-label text-sm tracking-[0.3em] uppercase mb-6" style="">Established 1989</span>
-<h1 class="text-7xl lg:text-8xl font-headline font-light leading-tight text-primary mb-8" style="">45 Years of <br><span class="italic" style="">Hospitality Excellence</span>
-</h1>
-<p class="text-xl text-on-surface-variant max-w-xl leading-relaxed mb-12" style="">
-                    Bridging traditional German standards with contemporary European innovation. A legacy of curated operational mastery for the modern maître d’.
-                </p>
-<div class="flex flex-wrap gap-6">
-<a class="px-8 py-4 bg-primary text-on-primary font-label tracking-widest uppercase text-sm hover:shadow-lg transition-all" href="#contact" style="">Secure a Consultation</a>
-<a class="px-8 py-4 border border-outline-variant text-primary font-label tracking-widest uppercase text-sm hover:bg-surface-container-low transition-all" href="#portfolio" style="">View Case Studies</a>
-</div>
-</div>
-<div class="lg:col-span-5 relative">
-<div class="aspect-[4/5] bg-surface-container-highest relative overflow-hidden group">
-<img alt="Portrait of a professional F&amp;B Expert" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000" data-alt="Sophisticated portrait of a mature European hospitality expert in a tailored navy suit against a soft architectural background with warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcjTTV40c1XNsW__ReoZlUu2XxvTMhbWLEBCrZZHz95RLsyebnCKdN5LQ3HE6yn3ezyHn1mHzRKZ66kF0QKvbdMDemU-Dz1Eq99B3wGNSUfiKQ65jZg-bAXtdqrr6KW9ZpAqhaHxHh5lFcI2a7jaUw9hfMM3XVjldRJRUEoPzRnwu2ag_G1djZHMGi0mtUdJeA4GvOUP6onFJGgro2hJiZgWHQtN2Sp5kyTo5iwFJ7G1QRgLFqlEqwU6k2jFhKoLs0qXEVsMbDnwRJ" style="">
-</div>
-<!-- Decorative asymmetry element -->
-<div class="absolute -bottom-8 -left-8 w-48 h-48 border border-secondary/20 hidden lg:block"></div>
-</div>
-</div>
-<!-- Tonal background shift -->
-<div class="absolute top-0 right-0 w-1/3 h-full bg-surface-container-low -z-10"></div>
-</header>
-<!-- About Me / Storytelling -->
-<section class="py-24 bg-surface-container-low" id="experience">
-<div class="max-w-7xl mx-auto px-8">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
-<div class="space-y-12">
-<h2 class="text-5xl font-headline leading-tight text-primary" style="">
-                        A Journey Through <br>The <span class="italic" style="">European Landscape</span>
-</h2>
-<div class="prose prose-lg text-on-surface-variant font-body">
-<p class="mb-6 leading-relaxed" style="">
-                            For over three decades, my career has been defined by the pursuit of perfection within the German and European gastronomic sectors. From the precision of Berlin’s Michelin-starred kitchens to the fluid elegance of Parisian front-of-house operations, I have dedicated my life to mastering the "German Standard" of operational discipline.
-                        </p>
-<p class="leading-relaxed" style="">
-                            My approach is not merely about management; it is about the philosophy of service. Every concept I develop is rooted in heritage yet optimized for the technical demands of the 21st century.
-                        </p>
-</div>
-</div>
-<!-- Heritage Timeline (Design System Signature) -->
-<div class="relative pl-12">
-<div class="absolute left-0 top-0 bottom-0 w-[1px] bg-outline-variant/30"></div>
-<div class="space-y-16">
-<div class="relative">
-<div class="absolute -left-[53px] top-1 w-2.5 h-2.5 bg-secondary"></div>
-<span class="block text-secondary font-label text-xs tracking-widest uppercase mb-2" style="">1989 — 2000</span>
-<h3 class="text-2xl font-headline text-primary mb-2" style="">The Foundation</h3>
-<p class="text-sm text-on-surface-variant" style="">Defining high-standards in Munich's luxury hospitality circle. Mastering the core of German operational rigor.</p>
-</div>
-<div class="relative">
-<div class="absolute -left-[53px] top-1 w-2.5 h-2.5 bg-secondary"></div>
-<span class="block text-secondary font-label text-xs tracking-widest uppercase mb-2" style="">2001 — 2015</span>
-<h3 class="text-2xl font-headline text-primary mb-2" style="">European Expansion</h3>
-<p class="text-sm text-on-surface-variant" style="">Leading multi-national F&amp;B concepts across London, Paris, and Zurich. Implementing scalable excellence.</p>
-</div>
-<div class="relative">
-<div class="absolute -left-[53px] top-1 w-2.5 h-2.5 bg-secondary"></div>
-<span class="block text-secondary font-label text-xs tracking-widest uppercase mb-2" style="">2016 — Present</span>
-<h3 class="text-2xl font-headline text-primary mb-2" style="">The Curated Legacy</h3>
-<p class="text-sm text-on-surface-variant" style="">Strategic consultancy for premium hotel brands and high-end restaurant groups globally.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Services Section (Bento Grid Style) -->
-<section class="py-32 bg-background" id="services">
-<div class="max-w-7xl mx-auto px-8">
-<div class="mb-20">
-<span class="text-secondary font-label text-sm tracking-[0.3em] uppercase" style="">Strategic Pillars</span>
-<h2 class="text-5xl font-headline text-primary mt-4" style="">Professional Services</h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-outline-variant/20">
-<div class="bg-surface-container-lowest p-10 group hover:bg-primary transition-colors duration-500">
-<span class="material-symbols-outlined text-secondary text-4xl mb-8 group-hover:text-primary-fixed" style="">architecture</span>
-<h3 class="text-2xl font-headline text-primary mb-4 group-hover:text-on-primary transition-colors" style="">Restaurant Concept Development</h3>
-<p class="text-on-surface-variant group-hover:text-primary-fixed/80 transition-colors text-sm leading-relaxed" style="">
-                        Transforming vision into viable, market-leading identities that resonate with European connoisseurs.
-                    </p>
-</div>
-<div class="bg-surface-container-lowest p-10 group hover:bg-primary transition-colors duration-500">
-<span class="material-symbols-outlined text-secondary text-4xl mb-8 group-hover:text-primary-fixed" style="">menu_book</span>
-<h3 class="text-2xl font-headline text-primary mb-4 group-hover:text-on-primary transition-colors" style="">Menu Engineering</h3>
-<p class="text-on-surface-variant group-hover:text-primary-fixed/80 transition-colors text-sm leading-relaxed" style="">
-                        Strategic analysis and culinary curation designed to maximize profitability while maintaining artistic integrity.
-                    </p>
-</div>
-<div class="bg-surface-container-lowest p-10 group hover:bg-primary transition-colors duration-500">
-<span class="material-symbols-outlined text-secondary text-4xl mb-8 group-hover:text-primary-fixed" style="">settings_suggest</span>
-<h3 class="text-2xl font-headline text-primary mb-4 group-hover:text-on-primary transition-colors" style="">Operational Excellence</h3>
-<p class="text-on-surface-variant group-hover:text-primary-fixed/80 transition-colors text-sm leading-relaxed" style="">
-                        The "German Standard" implemented through rigorous SOPs, lean management, and technical auditing.
-                    </p>
-</div>
-<div class="bg-surface-container-lowest p-10 group hover:bg-primary transition-colors duration-500">
-<span class="material-symbols-outlined text-secondary text-4xl mb-8 group-hover:text-primary-fixed" style="">school</span>
-<h3 class="text-2xl font-headline text-primary mb-4 group-hover:text-on-primary transition-colors" style="">Luxury Hospitality Training</h3>
-<p class="text-on-surface-variant group-hover:text-primary-fixed/80 transition-colors text-sm leading-relaxed" style="">
-                        Cultivating the next generation of service leaders through bespoke mentorship and technical workshops.
-                    </p>
-</div>
-</div>
-</div>
-</section>
-<!-- Expert Quote Signature Component -->
-<section class="w-full bg-primary-container py-24">
-<div class="max-w-4xl mx-auto px-8 text-center">
-<span class="material-symbols-outlined text-secondary text-5xl mb-8" data-weight="fill" style="">format_quote</span>
-<blockquote class="text-4xl md:text-5xl font-headline italic text-primary-fixed leading-tight mb-12" style="">
-                "True hospitality is the invisible hand that makes a guest feel they are exactly where they were always meant to be."
-            </blockquote>
-<p class="text-on-primary-container font-label tracking-widest uppercase text-sm" style="">— The Maître d’s Philosophy</p>
-</div>
-</section>
-<!-- Portfolio Section -->
-<section class="py-32 bg-background" id="portfolio">
-<div class="max-w-7xl mx-auto px-8">
-<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-<div>
-<span class="text-secondary font-label text-sm tracking-[0.3em] uppercase" style="">The Portfolio</span>
-<h2 class="text-5xl font-headline text-primary mt-4" style="">European Milestones</h2>
-</div>
-<div class="max-w-md text-on-surface-variant text-sm border-l border-outline-variant pl-8" style="">
-                    A selection of flagship projects that define the intersection of heritage and modern service design.
-                </div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-<!-- Project 1 -->
-<div class="group">
-<div class="aspect-video bg-surface-container overflow-hidden mb-8 relative">
-<img alt="Luxury restaurant interior in Berlin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Interior of a high-end modern restaurant in Berlin with dark wood paneling, velvet seating, and warm focused lighting on tables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQwUNcj_vopB4SQmY704Bgx1ploJVbRGPU_moW46IwoRWtFNGTxjy2xGbpvQX_T8iq-qnS71eKhY92dDUbkTdhfInVgHQEORflYH2NMDoOvA1gyUECyGn5xd_6kUKQrTDZDDDOOLPAUoxJ6jBL4y6VbHAskQsa09HyR9Z5OiItLOYsYORNt2sA3j1vAmyyy_nRSsNFJADgi8tMpCIGvpu6-Gl8c6FVkwMExQTww0Qxk59mSyJfKy9OUX3rKhVxSlodLzv4cIITSI8X" style="">
-<div class="absolute top-4 right-4 bg-primary text-on-primary px-4 py-1 text-xs font-label uppercase tracking-widest" style="">Berlin, Germany</div>
-</div>
-<h3 class="text-3xl font-headline text-primary mb-3 italic" style="">The Urban Archive</h3>
-<p class="text-on-surface-variant mb-6" style="">Complete operational restructuring of a 2-Michelin star destination, resulting in a 22% increase in floor efficiency.</p>
-</div>
-<!-- Project 2 -->
-<div class="group md:mt-24">
-<div class="aspect-video bg-surface-container overflow-hidden mb-8 relative">
-<img alt="Premium cocktail bar interior in London" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Atmospheric low-lit premium cocktail bar with marble counter and back-lit spirit bottles in a luxury London hotel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATQ10Pl0-Gu5fQhu5U4KDloNElf_hVMjHy-SsiGWabTSitGmHWBbv5lc-PvneoCZmjBN9oLIh1uX42qg4FYBTANxEfO40Nz34viPkmmuKXGv3STKWNkfm7B4uJgE8NZ9MyrauyNEmUh__oZp029eYfSfFg4x323XgOBo0ny_9ySu_mCQZsmJfd3c_cxwTj1NEkGjxRFqpeurwE5pY6nDZnxzfk9CxzwUDlt6L6Z2QFy3hZjwgEnzU_FATy0aFNnDiHiUBOdlfoyPL_" style="">
-<div class="absolute top-4 right-4 bg-primary text-on-primary px-4 py-1 text-xs font-label uppercase tracking-widest" style="">Mayfair, London</div>
-</div>
-<h3 class="text-3xl font-headline text-primary mb-3 italic" style="">Heritage Reserve</h3>
-<p class="text-on-surface-variant mb-6" style="">Concept development and staff training for a historic Mayfair establishment, bridging classic service with modern mixology.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Contact Section -->
-<section class="py-32 bg-surface-container-low border-t border-outline-variant/10" id="contact">
-<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-24">
-<div class="lg:col-span-5">
-<span class="text-secondary font-label text-sm tracking-[0.3em] uppercase" style="">Inquiry</span>
-<h2 class="text-5xl font-headline text-primary mt-4 mb-8" style="">Begin the <span class="italic" style="">Dialogue</span></h2>
-<p class="text-on-surface-variant mb-12 text-lg leading-relaxed" style="">
-                    Excellence begins with a conversation. Whether you are launching a new flagship or refining an existing legacy, I offer bespoke strategic guidance tailored to your vision.
-                </p>
-<div class="space-y-8">
-<div class="flex items-center gap-6">
-<span class="material-symbols-outlined text-secondary" style="">location_on</span>
-<span class="text-primary font-medium" style="">Maximilianstraße, Munich, Germany</span>
-</div>
-<div class="flex items-center gap-6">
-<span class="material-symbols-outlined text-secondary" style="">mail</span>
-<span class="text-primary font-medium" style="">consultancy@curatedlegacy.com</span>
-</div>
-<div class="flex items-center gap-6">
-<span class="material-symbols-outlined text-secondary" style="">phone_iphone</span>
-<span class="text-primary font-medium" style="">+49 (0) 89 234 567 89</span>
-</div>
-</div>
-</div>
-<div class="lg:col-span-7 bg-surface-container-lowest p-12 shadow-sm">
-<form action="#" class="space-y-10">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-<div class="relative">
-<input class="peer w-full bg-transparent border-0 border-b border-outline py-2 focus:ring-0 focus:border-primary placeholder-transparent transition-all" id="name" placeholder=" " type="text">
-<label class="absolute left-0 -top-3.5 text-secondary text-xs font-label uppercase tracking-widest transition-all peer-placeholder-shown:text-on-surface-variant peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-secondary peer-focus:text-xs" for="name" style="">Full Name</label>
-</div>
-<div class="relative">
-<input class="peer w-full bg-transparent border-0 border-b border-outline py-2 focus:ring-0 focus:border-primary placeholder-transparent transition-all" id="email" placeholder=" " type="email">
-<label class="absolute left-0 -top-3.5 text-secondary text-xs font-label uppercase tracking-widest transition-all peer-placeholder-shown:text-on-surface-variant peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-secondary peer-focus:text-xs" for="email" style="">Email Address</label>
-</div>
-</div>
-<div class="relative">
-<input class="peer w-full bg-transparent border-0 border-b border-outline py-2 focus:ring-0 focus:border-primary placeholder-transparent transition-all" id="subject" placeholder=" " type="text">
-<label class="absolute left-0 -top-3.5 text-secondary text-xs font-label uppercase tracking-widest transition-all peer-placeholder-shown:text-on-surface-variant peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-secondary peer-focus:text-xs" for="subject" style="">Inquiry Type</label>
-</div>
-<div class="relative">
-<textarea class="peer w-full bg-transparent border-0 border-b border-outline py-2 focus:ring-0 focus:border-primary placeholder-transparent transition-all resize-none" id="message" placeholder=" " rows="4"></textarea>
-<label class="absolute left-0 -top-3.5 text-secondary text-xs font-label uppercase tracking-widest transition-all peer-placeholder-shown:text-on-surface-variant peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-secondary peer-focus:text-xs" for="message" style="">Your Message</label>
-</div>
-<button class="w-full py-5 bg-primary text-on-primary font-label tracking-[0.2em] uppercase text-sm hover:bg-primary-container transition-colors" type="submit" style="">Submit Inquiry</button>
-</form>
-</div>
-</div>
-</section>
-<!-- Footer -->
-<footer class="bg-blue-950 dark:bg-slate-900 border-t border-white/10">
-<div class="flex flex-col md:flex-row justify-between items-center py-12 px-8 max-w-7xl mx-auto">
-<div class="mb-8 md:mb-0">
-<span class="text-lg font-serif text-stone-200 block mb-2" style="">The Curated Legacy</span>
-<p class="text-stone-400 font-sans text-xs tracking-widest uppercase" style="">© 2024 The Curated Legacy. Thirty-five years of hospitality excellence.</p>
-</div>
-<div class="flex gap-8">
-<a class="text-stone-400 hover:text-stone-100 transition-opacity font-sans text-sm tracking-widest uppercase" href="#" style="">Imprint</a>
-<a class="text-stone-400 hover:text-stone-100 transition-opacity font-sans text-sm tracking-widest uppercase" href="#" style="">Privacy Policy</a>
-<a class="text-stone-400 hover:text-stone-100 transition-opacity font-sans text-sm tracking-widest uppercase" href="#" style="">LinkedIn</a>
-<a class="text-stone-400 hover:text-stone-100 transition-opacity font-sans text-sm tracking-widest uppercase" href="#" style="">Contact</a>
-</div>
-</div>
-</footer>
-
-<!-- ================= BẮT ĐẦU HTML CHATBOT ================= -->
-<button id="chatbot-toggle-btn" class="chatbot-toggle-btn">
-    💬 Tư vấn AI
-</button>
-
-<div id="chatbot-container" class="chatbot-container hidden">
-    <div class="chatbot-header">
-        <div class="chatbot-header-left">
-            <div class="chatbot-online-indicator"></div>
-            <span class="chatbot-title">Trợ lý AI - K89</span>
-        </div>
-        <div class="chatbot-header-right">
-            <button id="chatbot-refresh-btn" class="chatbot-btn" title="Làm mới">↻</button>
-            <button id="chatbot-close-btn" class="chatbot-btn" title="Đóng">✕</button>
-        </div>
-    </div>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyên Viên Tư Vấn - Vinhomes Green Paradise Cần Giờ</title>
+    <meta name="description" content="Trang cá nhân của chuyên viên tư vấn dự án siêu đô thị biển sinh thái Vinhomes Green Paradise Cần Giờ (Vinhomes Long Beach).">
     
-    <div id="chatbot-messages" class="chatbot-messages"></div>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./styles.css">
+    
+    <!-- Phosphor Icons for premium icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="dark-theme">
+    <!-- Ambient glow background elements -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
 
-    <div class="chatbot-input-area">
-        <input type="text" id="chatbot-input" placeholder="Nhập tin nhắn..." autocomplete="off">
-        <button id="chatbot-send-btn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="22" y1="2" x2="11" y2="13"></line>
-                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-            </svg>
-        </button>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="#" class="logo">
+                <span class="logo-text">VH<span class="highlight">Paradise</span></span>
+            </a>
+            
+            <nav class="nav-links desktop-nav">
+                <a href="#hero">Trang chủ</a>
+                <a href="#about">Về Tôi</a>
+                <a href="#services">Dịch Vụ</a>
+                <a href="#portfolio">Dự Án</a>
+                <a href="#contact" class="btn btn-primary btn-sm">Liên Hệ Zalo</a>
+            </nav>
+
+            <button class="menu-toggle mobile-only" aria-label="Menu" id="menu-btn">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Nav Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <nav class="nav-links">
+                <a href="#hero" class="mobile-link">Trang chủ</a>
+                <a href="#about" class="mobile-link">Về Tôi</a>
+                <a href="#services" class="mobile-link">Dịch Vụ</a>
+                <a href="#portfolio" class="mobile-link">Dự Án</a>
+                <a href="#contact" class="btn btn-primary full-width mobile-link">Liên Hệ Zalo</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section id="hero" class="hero">
+            <div class="container hero-container grid-2-cols">
+                <div class="hero-content">
+                    <div class="badge">Siêu đô thị ESG++ đầu tiên tại VN</div>
+                    <h1 class="hero-title">
+                        Khám phá Đỉnh cao <br>
+                        <span class="highlight neon-text">Vinhomes Paradise Cần Giờ</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Tôi là chuyên gia tư vấn đầu tư bất động sản cao cấp, đồng hành cùng bạn sở hữu những siêu phẩm tại siêu đô thị biển sinh thái 10 tỷ USD của Vingroup.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#portfolio" class="btn btn-primary btn-lg">Xem Sản Phẩm</a>
+                        <a href="#contact" class="btn btn-outline btn-lg"><i class="ph ph-chat-circle-dots"></i> Nhận Tư Vấn</a>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <h3 class="stat-value">2,870<span class="highlight">ha</span></h3>
+                            <p class="stat-label">Tổng quy mô</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-value">10<span class="highlight">Tỷ $</span></h3>
+                            <p class="stat-label">Vốn đầu tư</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-value">70<span class="highlight">%</span></h3>
+                            <p class="stat-label">Không gian xanh & Nước</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-image-wrapper">
+                    <!-- Placeholder avatar generating prompt image representation -->
+                    <div class="avatar-container glass-panel">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" alt="Chuyên viên tư vấn" class="avatar-img">
+                        <div class="floating-card glass-panel badge-float top-right">
+                            <i class="ph-fill ph-check-circle highlight"></i> Chuyên gia BĐS
+                        </div>
+                        <div class="floating-card glass-panel badge-float bottom-left">
+                            <i class="ph-fill ph-star highlight"></i> Top Sales
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. About Me Section -->
+        <section id="about" class="about section-padding">
+            <div class="container grid-2-cols align-center">
+                <div class="about-image glass-panel">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Về tôi" class="rounded-image">
+                </div>
+                <div class="about-content">
+                    <h2 class="section-title">Về <span class="highlight">Tôi</span></h2>
+                    <p class="text-muted">
+                        Với hơn 5 năm kinh nghiệm trong lĩnh vực bất động sản nghỉ dưỡng và hạng sang, tôi đặc biệt tâm huyết với đại dự án <strong>Vinhomes Green Paradise Cần Giờ</strong>. 
+                    </p>
+                    <p class="text-muted">
+                        Dự án không chỉ là một cơ hội đầu tư vượt trội với các dự án hạ tầng trọng điểm như Cầu Cần Giờ (2028), mà còn là biểu tượng sống bền vững với mô hình đô thị ESG. Mục tiêu của tôi là cung cấp cho khách hàng những thông tin minh bạch, chính xác nhất và lựa chọn giỏ hàng tối ưu nhất.
+                    </p>
+                    
+                    <ul class="feature-list">
+                        <li><i class="ph ph-check highlight"></i> Tư vấn pháp lý & tài chính chuyên sâu</li>
+                        <li><i class="ph ph-check highlight"></i> Quyền truy cập giỏ hàng độc quyền</li>
+                        <li><i class="ph ph-check highlight"></i> Cập nhật tiến độ dự án 24/7</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. My Services Section -->
+        <section id="services" class="services section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Dịch Vụ <span class="highlight">Đặc Quyền</span></h2>
+                    <p class="section-subtitle">Đồng hành trọn vẹn tiến trình đầu tư tại Vinhomes Cần Giờ</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card glass-panel hover-glow">
+                        <div class="service-icon">
+                            <i class="ph ph-trend-up"></i>
+                        </div>
+                        <h3 class="service-title">Tư Vấn Đầu Tư</h3>
+                        <p class="service-desc">Phân tích chuyên sâu về tiềm năng tăng giá, so sánh các phân khu và tỷ suất sinh lời khi đầu tư biệt thự nghỉ dưỡng, shophouse.</p>
+                    </div>
+                    
+                    <div class="service-card glass-panel hover-glow">
+                        <div class="service-icon">
+                            <i class="ph ph-map-pin"></i>
+                        </div>
+                        <h3 class="service-title">Site Tour Trực Tiếp</h3>
+                        <p class="service-desc">Tổ chức các chuyến tham quan thực tế vị trí dự án lấn biển 1.357ha, cảm nhận quy mô và tiềm năng tại xã Long Hòa & Cần Thạnh.</p>
+                    </div>
+                    
+                    <div class="service-card glass-panel hover-glow">
+                        <div class="service-icon">
+                            <i class="ph ph-bank"></i>
+                        </div>
+                        <h3 class="service-title">Giải Pháp Tài Chính</h3>
+                        <p class="service-desc">Hỗ trợ làm việc với phòng tín dụng ngân hàng, thiết kế các gói vay ưu đãi linh hoạt phù hợp với dòng tiền của từng nhà đầu tư.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Portfolio Section -->
+        <section id="portfolio" class="portfolio section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Danh Mục <span class="highlight">Sản Phẩm</span></h2>
+                    <p class="section-subtitle">Các dòng siêu phẩm tại Vinhomes Green Paradise Cần Giờ</p>
+                </div>
+                
+                <div class="portfolio-grid">
+                    <div class="portfolio-item glass-panel group">
+                        <div class="portfolio-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1613490908835-9b552ddb3d8f?auto=format&fit=crop&w=800&q=80" alt="Biệt Thự Biển" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <a href="#contact" class="btn btn-primary">Nhận Báo Giá</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Biệt Thự Biển (Ocean Villa)</h3>
+                            <p>Tầm nhìn trực diện biển xanh, thiết kế không gian mở, sở hữu bến du thuyền cá nhân và đặc quyền thượng lưu.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item glass-panel group">
+                        <div class="portfolio-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" alt="Shophouse" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <a href="#contact" class="btn btn-primary">Nhận Báo Giá</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Shophouse Thương Mại</h3>
+                            <p>Nằm trên các trục đường chính và tổ hợp tiện ích phong cách quốc tế, tối ưu hóa lợi nhuận kinh doanh, đón đầu lượng khách du lịch.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item glass-panel group">
+                        <div class="portfolio-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1502672260266-1c1de2d9d000?auto=format&fit=crop&w=800&q=80" alt="Căn Hộ Nghỉ Dưỡng" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <a href="#contact" class="btn btn-primary">Nhận Báo Giá</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Căn Hộ Nghỉ Dưỡng</h3>
+                            <p>Tòa tháp biểu tượng với view trọn rừng ngập mặn Cần Giờ và biển Đông, kết nối chuỗi tiện ích: Vincom, Vinschool, Vinmec quy mô lớn.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Contact Section -->
+        <section id="contact" class="contact section-padding">
+            <div class="container">
+                <div class="contact-wrapper glass-panel">
+                    <div class="contact-content-box">
+                        <h2 class="section-title">Sẵn sàng sở hữu <br><span class="highlight neon-text">Siêu phẩm Cần Giờ?</span></h2>
+                        <p class="text-muted mt-4">
+                            Dự án dự kiến mở bán Quý 3/2025. Hãy là những nhà đầu tư tiên phong nằm trong danh sách ưu tiên chọn căn đẹp nhất. Liên hệ ngay với tôi hôm nay!
+                        </p>
+                        
+                        <div class="contact-methods mt-6">
+                            <a href="https://zalo.me/0906363106" target="_blank" class="contact-btn zalo-btn hover-glow">
+                                <div class="icon-circle">
+                                    <i class="ph-fill ph-chat-circle-text"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <span class="contact-label">Kết nối qua Zalo</span>
+                                    <span class="contact-value">0906 363 106</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-box">
+                        <form id="leadForm" class="form">
+                            <div class="form-group">
+                                <label for="name">Họ và tên</label>
+                                <input type="text" id="name" placeholder="Nhập họ tên của bạn..." required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Số điện thoại</label>
+                                <input type="tel" id="phone" placeholder="Nhập số điện thoại..." required>
+                            </div>
+                            <div class="form-group">
+                                <label for="interest">Sản phẩm quan tâm</label>
+                                <select id="interest" required class="custom-select">
+                                    <option value="" disabled selected>Chọn sản phẩm...</option>
+                                    <option value="villa">Biệt thự biển</option>
+                                    <option value="shophouse">Shophouse</option>
+                                    <option value="condo">Căn hộ</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary full-width btn-lg submit-btn">
+                                <span>Đăng Ký Tư Vấn</span>
+                                <i class="ph ph-paper-plane-right"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <span class="logo-text">VH<span class="highlight">Paradise</span></span>
+                <p class="text-muted mt-2">Đại lý tự do phân phối chính thức - Vinhomes Green Paradise Cần Giờ.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Chuyên viên tư vấn. Thiết kế dành riêng cho dự án Cần Giờ.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="./script.js"></script>
+
+    <!-- ================= BẮT ĐẦU CHATBOT WIDGET ================= -->
+    <!-- Thư viện parse Markdown cho chatbot -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Chatbot CSS -->
+    <link rel="stylesheet" href="chatbot.css">
+
+    <!-- Nút mở chatbot -->
+    <button id="chatbot-toggle-btn" class="chatbot-toggle-btn">
+        💬 Tư vấn AI
+    </button>
+
+    <!-- Khung Chatbot -->
+    <div id="chatbot-container" class="chatbot-container hidden">
+        <!-- Chat Header -->
+        <div class="chatbot-header">
+            <div class="chatbot-header-left">
+                <div class="chatbot-online-indicator"></div>
+                <span class="chatbot-title">Trợ lý AI - VHParadise</span>
+            </div>
+            <div class="chatbot-header-right">
+                <button id="chatbot-refresh-btn" class="chatbot-btn" title="Làm mới">↻</button>
+                <button id="chatbot-close-btn" class="chatbot-btn" title="Đóng">✕</button>
+            </div>
+        </div>
+        
+        <!-- Vùng Hiển Thị Tin Nhắn -->
+        <div id="chatbot-messages" class="chatbot-messages">
+            <!-- Dữ liệu chat sẽ render ở đây -->
+        </div>
+
+        <!-- Khung Nhập Liệu -->
+        <div class="chatbot-input-area">
+            <input type="text" id="chatbot-input" placeholder="Nhập tin nhắn..." autocomplete="off">
+            <button id="chatbot-send-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+            </button>
+        </div>
     </div>
-</div>
-<!-- ================= KẾT THÚC HTML CHATBOT ================= -->
+    <!-- ================= KẾT THÚC CHATBOT WIDGET ================= -->
 
-<script type="module" src="chatbot.js"></script>
-</body></html>
+    <!-- Load logic JS Chatbot -->
+    <script type="module" src="chatbot.js"></script>
+</body>
+</html>

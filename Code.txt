@@ -1,0 +1,50 @@
+function doPost(e) {
+  try {
+    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    var data = JSON.parse(e.postData.contents);
+    
+    var newTime = data.timestamp || new Date().toLocaleString('vi-VN');
+    var newName = data.name || '';
+    var newPhone = data.phone || '';
+    var newEmail = data.email || '';
+    var newSource = data.source || '';
+    var newSessionId = data.sessionId || '';
+    var newHistory = data.chatHistory || '';
+
+    var dataRange = sheet.getDataRange();
+    var values = dataRange.getValues();
+    var rowIndexToUpdate = -1;
+
+    // Tìm kiếm xem Session ID (Cột F - Vị trí thứ 5) đã tồn tại phiên chat này chưa
+    if (newSessionId) {
+      for (var i = values.length - 1; i > 0; i--) { 
+        var rowSessionId = values[i][5] ? values[i][5].toString().trim() : '';
+        if (rowSessionId === newSessionId) {
+          rowIndexToUpdate = i + 1; 
+          break;
+        }
+      }
+    }
+
+    if (rowIndexToUpdate > -1) {
+      // 1. CẬP NHẬT GỘP LẠI (Chỉ ghi đè nếu thông tin cũ đang trống)
+      var currentRow = values[rowIndexToUpdate - 1];
+      if (!currentRow[1] && newName) sheet.getRange(rowIndexToUpdate, 2).setValue(newName);
+      if (!currentRow[2] && newPhone) sheet.getRange(rowIndexToUpdate, 3).setValue(newPhone);
+      if (!currentRow[3] && newEmail) sheet.getRange(rowIndexToUpdate, 4).setValue(newEmail);
+      
+      // Ghi đè lịch sử chat bằng bản cập nhật mới nhất
+      if (newHistory) sheet.getRange(rowIndexToUpdate, 7).setValue(newHistory);
+      
+      // Update lại thời gian tương tác mới nhất
+      sheet.getRange(rowIndexToUpdate, 1).setValue(newTime);
+    } else {
+      // 2. TẠO DÒNG MỚI NẾU CHƯA TỒN TẠI
+      sheet.appendRow([newTime, newName, newPhone, newEmail, newSource, newSessionId, newHistory]);
+    }
+    
+    return ContentService.createTextOutput(JSON.stringify({ status: 'success' })).setMimeType(ContentService.MimeType.JSON);
+  } catch (error) {
+    return ContentService.createTextOutput(JSON.stringify({ status: 'error', message: error.toString() })).setMimeType(ContentService.MimeType.JSON);
+  }
+}
