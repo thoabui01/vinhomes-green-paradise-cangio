@@ -5,7 +5,9 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Thư viện parse Markdown và CSS Chatbot -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<link rel="stylesheet" href="chatbot.css">
 <script id="tailwind-config">
         tailwind.config = {
           darkMode: "class",
@@ -311,4 +313,37 @@
 </div>
 </div>
 </footer>
+
+<!-- ================= BẮT ĐẦU HTML CHATBOT ================= -->
+<button id="chatbot-toggle-btn" class="chatbot-toggle-btn">
+    💬 Tư vấn AI
+</button>
+
+<div id="chatbot-container" class="chatbot-container hidden">
+    <div class="chatbot-header">
+        <div class="chatbot-header-left">
+            <div class="chatbot-online-indicator"></div>
+            <span class="chatbot-title">Trợ lý AI - K89</span>
+        </div>
+        <div class="chatbot-header-right">
+            <button id="chatbot-refresh-btn" class="chatbot-btn" title="Làm mới">↻</button>
+            <button id="chatbot-close-btn" class="chatbot-btn" title="Đóng">✕</button>
+        </div>
+    </div>
+    
+    <div id="chatbot-messages" class="chatbot-messages"></div>
+
+    <div class="chatbot-input-area">
+        <input type="text" id="chatbot-input" placeholder="Nhập tin nhắn..." autocomplete="off">
+        <button id="chatbot-send-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+        </button>
+    </div>
+</div>
+<!-- ================= KẾT THÚC HTML CHATBOT ================= -->
+
+<script src="chatbot.js"></script>
 </body></html>

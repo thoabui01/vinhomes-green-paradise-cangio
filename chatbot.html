@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot Demo</title>
+    <!-- Thư viện parse Markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="chatbot.css">
+    
+    <!-- (Tùy chọn) Highlight.js cho code blocks -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+</head>
+<body>
+    <div style="padding: 2rem;">
+        <h1>Đây là trang Landing Page của bạn</h1>
+        <p>Chatbot đã được tích hợp hiển thị dạng Floating ở góc phải dưới màn hình.</p>
+    </div>
+
+    <!-- ================= BẮT ĐẦU HTML CHATBOT ================= -->
+    <!-- Nút mở chatbot -->
+    <button id="chatbot-toggle-btn" class="chatbot-toggle-btn">
+        💬 Tư vấn AI
+    </button>
+
+    <!-- Khung Chatbot -->
+    <div id="chatbot-container" class="chatbot-container hidden">
+        
+        <!-- Chat Header -->
+        <div class="chatbot-header">
+            <div class="chatbot-header-left">
+                <div class="chatbot-online-indicator"></div>
+                <span class="chatbot-title">Trợ lý AI - K89</span>
+            </div>
+            <div class="chatbot-header-right">
+                <button id="chatbot-refresh-btn" class="chatbot-btn" title="Làm mới">↻</button>
+                <button id="chatbot-close-btn" class="chatbot-btn" title="Đóng">✕</button>
+            </div>
+        </div>
+        
+        <!-- Vùng Hiển Thị Tin Nhắn -->
+        <div id="chatbot-messages" class="chatbot-messages">
+            <!-- Dữ liệu chat sẽ render ở đây -->
+        </div>
+
+        <!-- Khung Nhập Liệu -->
+        <div class="chatbot-input-area">
+            <input type="text" id="chatbot-input" placeholder="Nhập tin nhắn..." autocomplete="off">
+            <button id="chatbot-send-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+            </button>
+        </div>
+        
+    </div>
+    <!-- ================= KẾT THÚC HTML CHATBOT ================= -->
+
+    <!-- Load logic JS Chatbot -->
+    <script src="chatbot.js"></script>
+</body>
+</html>
