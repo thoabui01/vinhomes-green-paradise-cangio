@@ -1,10 +1,15 @@
+import OpenAI from "https://esm.sh/openai";
+
 /**
- * --- PHẦN 1: CẤU HÌNH API OPENROUTER ---
- * Model: z-ai/glm-4.5-air:free
+ * --- PHẦN 1: CẤU HÌNH API OPENAI-COMPATIBLE ---
+ * Model: ces-chatbot-gpt-5.4
  */
-const OPENROUTER_API_KEY = "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";
-const OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions";
-const MODEL_NAME = "z-ai/glm-4.5-air:free";
+const openai = new OpenAI({
+    apiKey: "sk-4bd27113b7dc78d1-lh6jld-f4f9c69f",
+    baseURL: "https://9router.vuhai.io.vn/v1",
+    dangerouslyAllowBrowser: true // Cần thiết khi chạy trực tiếp trên Frontend
+});
+const MODEL_NAME = "ces-chatbot-gpt-5.4";
 
 // Lưu trạng thái
 let systemPrompt = "";
@@ -156,28 +161,16 @@ async function sendMessage() {
     ];
 
     try {
-        const response = await fetch(OPENROUTER_API_URL, {
-            method: "POST",
-            headers: {
-                "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
-                "Content-Type": "application/json",
-                // Header tùy chọn cho OpenRouter API
-                "HTTP-Referer": window.location.href, 
-                "X-Title": "Landing Page AI Assistant"
-            },
-            body: JSON.stringify({
-                model: MODEL_NAME,
-                messages: payloadMessages
-            })
+        const response = await openai.chat.completions.create({
+            model: MODEL_NAME,
+            messages: payloadMessages,
         });
 
         // Xóa Typing sau khi nhận được Phản hồi API
         removeTyping();
-
-        const data = await response.json();
         
-        if (data && data.choices && data.choices.length > 0) {
-            const aiReply = data.choices[0].message.content;
+        if (response && response.choices && response.choices.length > 0) {
+            const aiReply = response.choices[0].message.content;
             appendMessage("bot", aiReply);
             messages.push({ role: "assistant", content: aiReply });
         } else {
