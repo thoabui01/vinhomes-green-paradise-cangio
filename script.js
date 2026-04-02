@@ -143,10 +143,12 @@ async function sendLeadToGoogleSheets() {
     };
 
     try {
+        const formData = new URLSearchParams();
+        formData.append("data", JSON.stringify(payload));
+        
         await fetch(WEBHOOK_URL, {
             method: "POST",
-            mode: "no-cors",
-            body: JSON.stringify(payload)
+            body: formData
         });
         console.log("Lead captured and sent!");
     } catch(err) {

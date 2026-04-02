@@ -13,7 +13,8 @@ function doPost(e) {
     var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
     
     try {
-        var data = JSON.parse(e.postData.contents);
+        var jsonString = e.parameter.data ? e.parameter.data : e.postData.contents;
+        var data = JSON.parse(jsonString);
         
         // Cập nhật hoặc thêm hàng mới dựa trên sessionId
         var dataRange = sheet.getDataRange();
