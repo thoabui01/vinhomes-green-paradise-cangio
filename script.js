@@ -1,5 +1,5 @@
 const sessionId = "sess_" + Math.random().toString(36).substr(2, 9);
-const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbzL5c2_y7Y6q3V3M6_1QeL6pD3J/exec"; // Placeholder GAS URL
+const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbyxanPl6AEnDZGxLA9aqIL8fZeBJKSUgLloAF1yHYHPwugB18slR7_xB2rWK7rdqwqi/exec"; // Placeholder GAS URL
 const OPENAI_API_KEY = "YOUR_OPENAI_API_KEY_HERE"; // User needs to replace or proxy
 
 // DOM Elements
