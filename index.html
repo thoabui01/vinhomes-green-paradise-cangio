@@ -3,331 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chuyên Viên Tư Vấn - Vinhomes Green Paradise Cần Giờ</title>
-    <meta name="description" content="Trang cá nhân của chuyên viên tư vấn dự án siêu đô thị biển sinh thái Vinhomes Green Paradise Cần Giờ (Vinhomes Long Beach).">
-    
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./styles.css">
-    
-    <!-- Phosphor Icons for premium icons -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <meta name="description" content="Khám phá Vinhomes Green Paradise Cần Giờ - Siêu dự án nghỉ dưỡng và đô thị sinh thái cao cấp tại phía Nam Sài Gòn. Cùng chuyên viên tư vấn chuyên nghiệp khám phá cơ hội đầu tư và an cư tuyệt vời.">
+    <title>Vinhomes Green Paradise Cần Giờ | Dịch vụ Tư Vấn Chuyên Nghiệp</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="dark-theme">
-    <!-- Ambient glow background elements -->
-    <div class="ambient-glow glow-1"></div>
-    <div class="ambient-glow glow-2"></div>
-    <div class="ambient-glow glow-3"></div>
+<body>
 
     <!-- Header Navigation -->
-    <header class="header">
-        <div class="container header-content">
-            <a href="#" class="logo">
-                <span class="logo-text">VH<span class="highlight">Paradise</span></span>
-            </a>
-            
-            <nav class="nav-links desktop-nav">
-                <a href="#hero">Trang chủ</a>
-                <a href="#about">Về Tôi</a>
-                <a href="#services">Dịch Vụ</a>
-                <a href="#portfolio">Dự Án</a>
-                <a href="#contact" class="btn btn-primary btn-sm">Liên Hệ Zalo</a>
-            </nav>
-
-            <button class="menu-toggle mobile-only" aria-label="Menu" id="menu-btn">
-                <i class="ph ph-list"></i>
-            </button>
-        </div>
-        
-        <!-- Mobile Nav Menu -->
-        <div class="mobile-menu" id="mobile-menu">
-            <nav class="nav-links">
-                <a href="#hero" class="mobile-link">Trang chủ</a>
-                <a href="#about" class="mobile-link">Về Tôi</a>
-                <a href="#services" class="mobile-link">Dịch Vụ</a>
-                <a href="#portfolio" class="mobile-link">Dự Án</a>
-                <a href="#contact" class="btn btn-primary full-width mobile-link">Liên Hệ Zalo</a>
+    <header class="header blur-glass">
+        <div class="container h-flex">
+            <div class="logo">
+                <span class="gold-text">Vinhomes</span> Paradise
+            </div>
+            <nav class="desktop-nav">
+                <a href="#home">Trang chủ</a>
+                <a href="#about">Giới thiệu</a>
+                <a href="#products">Sản phẩm</a>
+                <a href="#contact" class="btn-primary">Liên hệ ngay</a>
             </nav>
         </div>
     </header>
 
-    <main>
-        <!-- 1. Hero Section -->
-        <section id="hero" class="hero">
-            <div class="container hero-container grid-2-cols">
-                <div class="hero-content">
-                    <div class="badge">Siêu đô thị ESG++ đầu tiên tại VN</div>
-                    <h1 class="hero-title">
-                        Khám phá Đỉnh cao <br>
-                        <span class="highlight neon-text">Vinhomes Paradise Cần Giờ</span>
-                    </h1>
-                    <p class="hero-subtitle">
-                        Tôi là chuyên gia tư vấn đầu tư bất động sản cao cấp, đồng hành cùng bạn sở hữu những siêu phẩm tại siêu đô thị biển sinh thái 10 tỷ USD của Vingroup.
-                    </p>
-                    <div class="hero-actions">
-                        <a href="#portfolio" class="btn btn-primary btn-lg">Xem Sản Phẩm</a>
-                        <a href="#contact" class="btn btn-outline btn-lg"><i class="ph ph-chat-circle-dots"></i> Nhận Tư Vấn</a>
-                    </div>
-                    
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <h3 class="stat-value">2,870<span class="highlight">ha</span></h3>
-                            <p class="stat-label">Tổng quy mô</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3 class="stat-value">10<span class="highlight">Tỷ $</span></h3>
-                            <p class="stat-label">Vốn đầu tư</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3 class="stat-value">70<span class="highlight">%</span></h3>
-                            <p class="stat-label">Không gian xanh & Nước</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="hero-image-wrapper">
-                    <!-- Placeholder avatar generating prompt image representation -->
-                    <div class="avatar-container glass-panel">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" alt="Chuyên viên tư vấn" class="avatar-img">
-                        <div class="floating-card glass-panel badge-float top-right">
-                            <i class="ph-fill ph-check-circle highlight"></i> Chuyên gia BĐS
-                        </div>
-                        <div class="floating-card glass-panel badge-float bottom-left">
-                            <i class="ph-fill ph-star highlight"></i> Top Sales
-                        </div>
-                    </div>
-                </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="fade-up">Kiến Tạo Cuộc Sống <br><span class="gold-text text-glow">Thượng Lưu Nghỉ Dưỡng</span></h1>
+            <p class="fade-up delay-1">Khám phá tuyệt tác đô thị sinh thái Vinhomes Green Paradise Cần Giờ. <br>Độc bản tinh hoa - Sinh lời bền vững.</p>
+            <div class="hero-btn-group fade-up delay-2">
+                <a href="#contact" class="btn-primary glow-effect">Nhận Báo Giá & Ưu Đãi</a>
+                <a href="#about" class="btn-secondary">Tìm Hiểu Thêm</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 2. About Me Section -->
-        <section id="about" class="about section-padding">
-            <div class="container grid-2-cols align-center">
-                <div class="about-image glass-panel">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Về tôi" class="rounded-image">
+    <!-- About Section -->
+    <section id="about" class="section dark-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img glass-panel">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Biệt thự Vinhomes">
                 </div>
-                <div class="about-content">
-                    <h2 class="section-title">Về <span class="highlight">Tôi</span></h2>
-                    <p class="text-muted">
-                        Với hơn 5 năm kinh nghiệm trong lĩnh vực bất động sản nghỉ dưỡng và hạng sang, tôi đặc biệt tâm huyết với đại dự án <strong>Vinhomes Green Paradise Cần Giờ</strong>. 
-                    </p>
-                    <p class="text-muted">
-                        Dự án không chỉ là một cơ hội đầu tư vượt trội với các dự án hạ tầng trọng điểm như Cầu Cần Giờ (2028), mà còn là biểu tượng sống bền vững với mô hình đô thị ESG. Mục tiêu của tôi là cung cấp cho khách hàng những thông tin minh bạch, chính xác nhất và lựa chọn giỏ hàng tối ưu nhất.
-                    </p>
-                    
+                <div class="about-text">
+                    <h2 class="section-title">Tại Sao Chọn <span class="gold-text">Green Paradise?</span></h2>
+                    <p>Vinhomes Green Paradise Cần Giờ không chỉ là một ngôi nhà, mà là một biểu tượng của sự tôn quý và phong cách sống nghỉ dưỡng đỉnh cao ngay tại TP.HCM. Với quy mô siêu khủng, hệ sinh thái tiện ích All-in-one và bãi biển nhân tạo lớn nhất khu vực, đây là mảnh ghép hoàn hảo cho giới tinh hoa.</p>
                     <ul class="feature-list">
-                        <li><i class="ph ph-check highlight"></i> Tư vấn pháp lý & tài chính chuyên sâu</li>
-                        <li><i class="ph ph-check highlight"></i> Quyền truy cập giỏ hàng độc quyền</li>
-                        <li><i class="ph ph-check highlight"></i> Cập nhật tiến độ dự án 24/7</li>
+                        <li><i class="fa-solid fa-check gold-text"></i> Vị trí độc tôn kề biển, sát rừng</h2>
+                        <li><i class="fa-solid fa-check gold-text"></i> Tiềm năng tăng giá vượt trội</h2>
+                        <li><i class="fa-solid fa-check gold-text"></i> Chủ đầu tư Vingroup uy tín số 1</h2>
+                        <li><i class="fa-solid fa-check gold-text"></i> Hệ tiện ích 5 sao đặc quyền</h2>
                     </ul>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 3. My Services Section -->
-        <section id="services" class="services section-padding">
-            <div class="container">
-                <div class="section-header text-center">
-                    <h2 class="section-title">Dịch Vụ <span class="highlight">Đặc Quyền</span></h2>
-                    <p class="section-subtitle">Đồng hành trọn vẹn tiến trình đầu tư tại Vinhomes Cần Giờ</p>
+    <!-- Products Section -->
+    <section id="products" class="section">
+        <div class="container text-center">
+            <h2 class="section-title">Danh Mục <span class="gold-text">Sản Phẩm</span></h2>
+            <p class="section-subtitle">Đa dạng loại hình, đáp ứng mọi nhu cầu đầu tư và an cư của giới thượng lưu.</p>
+            
+            <div class="cards-grid">
+                <div class="card glass-panel hover-lift">
+                    <img src="https://images.unsplash.com/photo-1613490908578-f71694fdeba9?auto=format&fit=crop&w=600&q=80" alt="Biệt thự đơn lập">
+                    <div class="card-content">
+                        <h3>Biệt Thự Đơn Lập</h3>
+                        <p>Đẳng cấp sống ven biển với không gian riêng tư được thiết kế tối ưu, đậm chất resort.</p>
+                        <a href="#contact" class="btn-text">Tư vấn ngay <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="card glass-panel hover-lift">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80" alt="Biệt thự song lập">
+                    <div class="card-content">
+                        <h3>Biệt Thự Song Lập</h3>
+                        <p>Lựa chọn hoàn hảo cho gia đình đa thế hệ, tầm view nội khu và view công viên mãn nhãn.</p>
+                        <a href="#contact" class="btn-text">Tư vấn ngay <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="card glass-panel hover-lift">
+                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=600&q=80" alt="Boutique Hotel">
+                    <div class="card-content">
+                        <h3>Boutique Hotel / Shophouse</h3>
+                        <p>Cơ hội kinh doanh sinh lời vô hạn tại đại đô thị sầm uất bậc nhất phía Nam.</p>
+                        <a href="#contact" class="btn-text">Tư vấn ngay <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Services Section -->
+    <section id="contact" class="section dark-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info glass-panel">
+                    <h2 class="section-title">Kết Nối <span class="gold-text">Chuyên Gia</span></h2>
+                    <p>Tôi là tư vấn viên chuyên nghiệp của dự án Vinhomes Green Paradise Cần Giờ. Cam kết đồng hành cùng quý khách 24/7 để chọn được sản phẩm ưng ý và ưu đãi tốt nhất.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="c-item">
+                            <div class="c-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <h4>Hotline Trực Tiếp</h4>
+                                <a href="tel:0906363106" class="contact-link">0906363106</a>
+                            </div>
+                        </div>
+                        <div class="c-item">
+                            <div class="c-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <h4>Email Hỗ Trợ Phản Hồi Nhanh</h4>
+                                <a href="mailto:btkt.thoa@gmail.com" class="contact-link">btkt.thoa@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="services-grid">
-                    <div class="service-card glass-panel hover-glow">
-                        <div class="service-icon">
-                            <i class="ph ph-trend-up"></i>
-                        </div>
-                        <h3 class="service-title">Tư Vấn Đầu Tư</h3>
-                        <p class="service-desc">Phân tích chuyên sâu về tiềm năng tăng giá, so sánh các phân khu và tỷ suất sinh lời khi đầu tư biệt thự nghỉ dưỡng, shophouse.</p>
-                    </div>
-                    
-                    <div class="service-card glass-panel hover-glow">
-                        <div class="service-icon">
-                            <i class="ph ph-map-pin"></i>
-                        </div>
-                        <h3 class="service-title">Site Tour Trực Tiếp</h3>
-                        <p class="service-desc">Tổ chức các chuyến tham quan thực tế vị trí dự án lấn biển 1.357ha, cảm nhận quy mô và tiềm năng tại xã Long Hòa & Cần Thạnh.</p>
-                    </div>
-                    
-                    <div class="service-card glass-panel hover-glow">
-                        <div class="service-icon">
-                            <i class="ph ph-bank"></i>
-                        </div>
-                        <h3 class="service-title">Giải Pháp Tài Chính</h3>
-                        <p class="service-desc">Hỗ trợ làm việc với phòng tín dụng ngân hàng, thiết kế các gói vay ưu đãi linh hoạt phù hợp với dòng tiền của từng nhà đầu tư.</p>
-                    </div>
+                <div class="contact-form glass-panel">
+                    <h3>Gửi Yêu Cầu Tư Vấn</h3>
+                    <form id="leadForm">
+                        <input type="text" placeholder="Họ và tên quý khách *" required>
+                        <input type="tel" placeholder="Số điện thoại *" required>
+                        <input type="email" placeholder="Email (Không bắt buộc)">
+                        <select required>
+                            <option value="">-- Mức Tài Chính Dự Kiến --</option>
+                            <option value="duoi_10">Dưới 10 Tỷ</option>
+                            <option value="10_30">10 Tỷ - 30 Tỷ</option>
+                            <option value="tren_30">Trên 30 Tỷ</option>
+                        </select>
+                        <button type="button" class="btn-primary w-100" onclick="alert('Tính năng đang bảo trì, vui lòng Chat với AI hoặc gọi Hotline!')">Nhận Báo Giá Qua Zalo</button>
+                    </form>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 4. Portfolio Section -->
-        <section id="portfolio" class="portfolio section-padding">
-            <div class="container">
-                <div class="section-header text-center">
-                    <h2 class="section-title">Danh Mục <span class="highlight">Sản Phẩm</span></h2>
-                    <p class="section-subtitle">Các dòng siêu phẩm tại Vinhomes Green Paradise Cần Giờ</p>
-                </div>
-                
-                <div class="portfolio-grid">
-                    <div class="portfolio-item glass-panel group">
-                        <div class="portfolio-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1613490908835-9b552ddb3d8f?auto=format&fit=crop&w=800&q=80" alt="Biệt Thự Biển" class="portfolio-img">
-                            <div class="portfolio-overlay">
-                                <a href="#contact" class="btn btn-primary">Nhận Báo Giá</a>
-                            </div>
-                        </div>
-                        <div class="portfolio-info">
-                            <h3>Biệt Thự Biển (Ocean Villa)</h3>
-                            <p>Tầm nhìn trực diện biển xanh, thiết kế không gian mở, sở hữu bến du thuyền cá nhân và đặc quyền thượng lưu.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="portfolio-item glass-panel group">
-                        <div class="portfolio-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" alt="Shophouse" class="portfolio-img">
-                            <div class="portfolio-overlay">
-                                <a href="#contact" class="btn btn-primary">Nhận Báo Giá</a>
-                            </div>
-                        </div>
-                        <div class="portfolio-info">
-                            <h3>Shophouse Thương Mại</h3>
-                            <p>Nằm trên các trục đường chính và tổ hợp tiện ích phong cách quốc tế, tối ưu hóa lợi nhuận kinh doanh, đón đầu lượng khách du lịch.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="portfolio-item glass-panel group">
-                        <div class="portfolio-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1502672260266-1c1de2d9d000?auto=format&fit=crop&w=800&q=80" alt="Căn Hộ Nghỉ Dưỡng" class="portfolio-img">
-                            <div class="portfolio-overlay">
-                                <a href="#contact" class="btn btn-primary">Nhận Báo Giá</a>
-                            </div>
-                        </div>
-                        <div class="portfolio-info">
-                            <h3>Căn Hộ Nghỉ Dưỡng</h3>
-                            <p>Tòa tháp biểu tượng với view trọn rừng ngập mặn Cần Giờ và biển Đông, kết nối chuỗi tiện ích: Vincom, Vinschool, Vinmec quy mô lớn.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 5. Contact Section -->
-        <section id="contact" class="contact section-padding">
-            <div class="container">
-                <div class="contact-wrapper glass-panel">
-                    <div class="contact-content-box">
-                        <h2 class="section-title">Sẵn sàng sở hữu <br><span class="highlight neon-text">Siêu phẩm Cần Giờ?</span></h2>
-                        <p class="text-muted mt-4">
-                            Dự án dự kiến mở bán Quý 3/2025. Hãy là những nhà đầu tư tiên phong nằm trong danh sách ưu tiên chọn căn đẹp nhất. Liên hệ ngay với tôi hôm nay!
-                        </p>
-                        
-                        <div class="contact-methods mt-6">
-                            <a href="https://zalo.me/0906363106" target="_blank" class="contact-btn zalo-btn hover-glow">
-                                <div class="icon-circle">
-                                    <i class="ph-fill ph-chat-circle-text"></i>
-                                </div>
-                                <div class="contact-info">
-                                    <span class="contact-label">Kết nối qua Zalo</span>
-                                    <span class="contact-value">0906 363 106</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-form-box">
-                        <form id="leadForm" class="form">
-                            <div class="form-group">
-                                <label for="name">Họ và tên</label>
-                                <input type="text" id="name" placeholder="Nhập họ tên của bạn..." required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Số điện thoại</label>
-                                <input type="tel" id="phone" placeholder="Nhập số điện thoại..." required>
-                            </div>
-                            <div class="form-group">
-                                <label for="interest">Sản phẩm quan tâm</label>
-                                <select id="interest" required class="custom-select">
-                                    <option value="" disabled selected>Chọn sản phẩm...</option>
-                                    <option value="villa">Biệt thự biển</option>
-                                    <option value="shophouse">Shophouse</option>
-                                    <option value="condo">Căn hộ</option>
-                                </select>
-                            </div>
-                            <button type="submit" class="btn btn-primary full-width btn-lg submit-btn">
-                                <span>Đăng Ký Tư Vấn</span>
-                                <i class="ph ph-paper-plane-right"></i>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <div class="footer-logo">
-                <span class="logo-text">VH<span class="highlight">Paradise</span></span>
-                <p class="text-muted mt-2">Đại lý tự do phân phối chính thức - Vinhomes Green Paradise Cần Giờ.</p>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Chuyên viên tư vấn. Thiết kế dành riêng cho dự án Cần Giờ.</p>
-            </div>
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2026 Chuyên Trang Tư Vấn Vinhomes Green Paradise Cần Giờ. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Custom JS -->
-    <script src="./script.js"></script>
-
-    <!-- ================= BẮT ĐẦU CHATBOT WIDGET ================= -->
-    <!-- Thư viện parse Markdown cho chatbot -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <!-- Chatbot CSS -->
-    <link rel="stylesheet" href="chatbot.css">
-
-    <!-- Nút mở chatbot -->
-    <button id="chatbot-toggle-btn" class="chatbot-toggle-btn">
-        💬 Tư vấn AI
-    </button>
-
-    <!-- Khung Chatbot -->
-    <div id="chatbot-container" class="chatbot-container hidden">
-        <!-- Chat Header -->
-        <div class="chatbot-header">
-            <div class="chatbot-header-left">
-                <div class="chatbot-online-indicator"></div>
-                <span class="chatbot-title">Trợ lý AI - VHParadise</span>
+    <!-- Chatbot Floating Widget -->
+    <div id="chatbot-widget">
+        <button id="chatbot-toggle" class="glow-effect">
+            <i class="fa-solid fa-headset"></i> Chuyên Viên AI
+        </button>
+        <div id="chatbot-container" class="glass-panel hidden">
+            <div class="chat-header">
+                <div class="chat-title">
+                    <div class="status-dot"></div>
+                    <div>
+                        <strong>Vin Cần Giờ AI</strong>
+                        <span>Trợ lý tư vấn 24/7</span>
+                    </div>
+                </div>
+                <button id="chatbot-close"><i class="fa-solid fa-times"></i></button>
             </div>
-            <div class="chatbot-header-right">
-                <button id="chatbot-refresh-btn" class="chatbot-btn" title="Làm mới">↻</button>
-                <button id="chatbot-close-btn" class="chatbot-btn" title="Đóng">✕</button>
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot">
+                    Xin kính chào Quý Khách! Tôi là Trợ lý AI chuyên hỗ trợ Dư Án Vinhomes Green Paradise Cần Giờ. Quý khách đang quan tâm đến loại hình sản phẩm biệt thự, shophouse hay cần hỗ trợ thông tin gì ạ? <br> Xin quý khách vui lòng cho biết <strong>Tên và SĐT</strong> để chuyên viên ưu tiên hỗ trợ tốt nhất!
+                </div>
             </div>
-        </div>
-        
-        <!-- Vùng Hiển Thị Tin Nhắn -->
-        <div id="chatbot-messages" class="chatbot-messages">
-            <!-- Dữ liệu chat sẽ render ở đây -->
-        </div>
-
-        <!-- Khung Nhập Liệu -->
-        <div class="chatbot-input-area">
-            <input type="text" id="chatbot-input" placeholder="Nhập tin nhắn..." autocomplete="off">
-            <button id="chatbot-send-btn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="22" y1="2" x2="11" y2="13"></line>
-                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                </svg>
-            </button>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Nhập câu hỏi của quý khách...">
+                <button id="chat-send"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
         </div>
     </div>
-    <!-- ================= KẾT THÚC CHATBOT WIDGET ================= -->
 
-    <!-- Load logic JS Chatbot -->
-    <script type="module" src="chatbot.js"></script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
