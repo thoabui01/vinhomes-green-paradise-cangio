@@ -97,7 +97,6 @@ async function sendMessage() {
 
         if(data.choices && data.choices.length > 0) {
             let reply = data.choices[0].message.content;
-            chatHistory.push({ role: "assistant", content: reply });
             
             // Check for hidden JSON for lead extraction
             const jsonMatch = reply.match(/```json\s*(\{[\s\S]*?\})\s*```/);
@@ -106,14 +105,14 @@ async function sendMessage() {
                     const parsed = JSON.parse(jsonMatch[1]);
                     extractedLeadData = { ...extractedLeadData, ...parsed };
                     reply = reply.replace(jsonMatch[0], ''); // remove hidden tag from display
-                    
-                    if (extractedLeadData.phone && !leadSent) {
-                        sendLeadToGoogleSheets();
-                    }
                 } catch(e) {}
             }
             
+            chatHistory.push({ role: "assistant", content: reply });
             appendMessage(reply, true);
+            
+            // Always sync chat to Google Sheets
+            sendLeadToGoogleSheets();
         } else {
              appendMessage("Hệ thống đang bận, quý khách có thể gọi Hotline 0906363106 để được hỗ trợ tức thì.", true);
         }
@@ -128,29 +127,28 @@ async function sendLeadToGoogleSheets() {
     // Format the chat history to a readable string
     const stringifiedHistory = chatHistory
         .filter(m => m.role !== 'system')
-        .map(m => `${m.role === 'user' ? 'Khách' : 'AI'}: ${m.content.replace(/```json[\s\S]*```/g,'')}`)
+        .map(m => `${m.role === 'user' ? 'Khách' : 'AI'}: ${m.content}`)
         .join('\n');
 
     const payload = {
         timestamp: new Date().toLocaleString('vi-VN', {timeZone: 'Asia/Ho_Chi_Minh'}),
         name: extractedLeadData.name || "Khách Hàng",
-        phone: extractedLeadData.phone,
-        email: extractedLeadData.email || "Không có",
+        phone: extractedLeadData.phone || "",
+        email: extractedLeadData.email || "",
         source: "Website Chatbot",
         sessionId: sessionId,
         chatHistory: stringifiedHistory,
-        interest: extractedLeadData.interest || "Đang tìm hiểu",
-        level: extractedLeadData.level || "warm"
+        interest: extractedLeadData.interest || "Đang tư vấn",
+        level: extractedLeadData.level || "cold"
     };
 
     try {
         await fetch(WEBHOOK_URL, {
             method: "POST",
-            mode: "no-cors",
-            headers: { "Content-Type": "application/json" },
+            redirect: "follow",
+            headers: { "Content-Type": "text/plain;charset=utf-8" },
             body: JSON.stringify(payload)
         });
-        leadSent = true;
         console.log("Lead captured and sent!");
     } catch(err) {
         console.error("Gửi webhook thất bại", err);
