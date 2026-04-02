@@ -78,26 +78,47 @@ async function sendMessage() {
     chatMessages.scrollTop = chatMessages.scrollHeight;
 
     try {
-        // Send request to LLM API (Proxy or direct for demo)
-        const response = await fetch("https://api.openai.com/v1/chat/completions", {
+        let isGemini = OPENAI_API_KEY.startsWith("AIza");
+        let apiUrl = isGemini ? `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=${OPENAI_API_KEY}` : "https://api.openai.com/v1/chat/completions";
+        
+        let systemPrompt = chatHistory.find(m => m.role === 'system')?.content || "";
+        let geminiContents = chatHistory.filter(m => m.role !== 'system').map(m => ({
+            role: m.role === 'assistant' ? 'model' : 'user',
+            parts: [{ text: m.content }]
+        }));
+
+        let reqBody = isGemini ? {
+            system_instruction: { parts: [{ text: systemPrompt }] },
+            contents: geminiContents,
+            generationConfig: { temperature: 0.7 }
+        } : {
+            model: "gpt-4o-mini",
+            messages: chatHistory,
+            temperature: 0.7
+        };
+
+        let headers = { "Content-Type": "application/json" };
+        if (!isGemini) {
+            headers["Authorization"] = `Bearer ${OPENAI_API_KEY}`;
+        }
+
+        const response = await fetch(apiUrl, {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${OPENAI_API_KEY}`
-            },
-            body: JSON.stringify({
-                model: "gpt-4o-mini", // fallback model
-                messages: chatHistory,
-                temperature: 0.7
-            })
+            headers: headers,
+            body: JSON.stringify(reqBody)
         });
 
         const data = await response.json();
         chatMessages.removeChild(loadingDiv);
 
-        if(data.choices && data.choices.length > 0) {
-            let reply = data.choices[0].message.content;
-            
+        let reply = "";
+        if (isGemini && data.candidates && data.candidates.length > 0) {
+            reply = data.candidates[0].content.parts[0].text;
+        } else if (!isGemini && data.choices && data.choices.length > 0) {
+            reply = data.choices[0].message.content;
+        }
+
+        if(reply) {
             // Check for hidden JSON for lead extraction
             const jsonMatch = reply.match(/```json\s*(\{[\s\S]*?\})\s*```/);
             if (jsonMatch) {
