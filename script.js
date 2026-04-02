@@ -145,8 +145,7 @@ async function sendLeadToGoogleSheets() {
     try {
         await fetch(WEBHOOK_URL, {
             method: "POST",
-            redirect: "follow",
-            headers: { "Content-Type": "text/plain;charset=utf-8" },
+            mode: "no-cors",
             body: JSON.stringify(payload)
         });
         console.log("Lead captured and sent!");
