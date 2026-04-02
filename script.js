@@ -164,34 +164,14 @@ async function sendLeadToGoogleSheets() {
     };
 
     try {
-        // Đảm bảo tạo iframe ẩn để không bị reload trang
-        let iframe = document.getElementById('hidden_iframe');
-        if (!iframe) {
-            iframe = document.createElement('iframe');
-            iframe.name = 'hidden_iframe';
-            iframe.id = 'hidden_iframe';
-            iframe.style.display = 'none';
-            document.body.appendChild(iframe);
-        }
-
-        // Tạo một form ảo gửi dữ liệu
-        const form = document.createElement('form');
-        form.action = WEBHOOK_URL;
-        form.method = 'POST';
-        form.target = 'hidden_iframe';
-
-        const input = document.createElement('input');
-        input.type = 'hidden';
-        input.name = 'data';
-        input.value = JSON.stringify(payload);
-        
-        form.appendChild(input);
-        document.body.appendChild(form);
-        
-        form.submit();
-        
-        // Dọn dẹp form sau khi gửi
-        setTimeout(() => document.body.removeChild(form), 1000);
+        await fetch(WEBHOOK_URL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+                "Content-Type": "text/plain;charset=utf-8"
+            },
+            body: JSON.stringify(payload)
+        });
         console.log("Lead captured and sent!");
     } catch(err) {
         console.error("Gửi webhook thất bại", err);
